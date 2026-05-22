@@ -131,7 +131,7 @@ const AboutPage = () => {
       localStorage.getItem("certificates") || "[]",
     );
 
-    const startDate = new Date("2023-01-01"); // Dynamic experience calculation base
+    const startDate = new Date("2026-05-11"); // Dynamic experience calculation base
     const today = new Date();
     let experience = today.getFullYear() - startDate.getFullYear();
     if (
@@ -142,7 +142,7 @@ const AboutPage = () => {
     }
 
     return {
-      totalCertificates: storedCertificates.length || 4,
+      totalCertificates: storedCertificates.length || 0,
       YearExperience: experience > 0 ? experience : 1,
     };
   }, []);
