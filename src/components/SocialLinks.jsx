@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import {
   Linkedin,
-  Github,
+  Facebook,
   Instagram,
   Youtube,
   ExternalLink,
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import PresenceWidget from "./PresenceWidget";
 
 const socialLinks = [
   {
@@ -16,7 +15,7 @@ const socialLinks = [
     displayName: "Let's Connect",
     subText: "on LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/ekizr/",
+    url: "https://www.linkedin.com/in/shofaya-tsany-ab37791b9/",
     color: "#0A66C2",
     gradient: "from-[#0A66C2] to-[#0077B5]",
     isPrimary: true,
@@ -24,34 +23,34 @@ const socialLinks = [
   {
     name: "Instagram",
     displayName: "Instagram",
-    subText: "@ekizr_",
+    subText: "@shofayatsny_",
     icon: Instagram,
-    url: "https://www.instagram.com/ekizr_/?hl=id",
+    url: "https://www.instagram.com/shofayatsny_/",
     color: "#E4405F",
     gradient: "from-[#833AB4] via-[#E4405F] to-[#FCAF45]",
   },
   {
     name: "YouTube",
     displayName: "Youtube",
-    subText: "@eki zulfar",
+    subText: "@shofaya tsany",
     icon: Youtube,
-    url: "https://www.youtube.com/@eki_zulfar",
+    url: "https://www.youtube.com",
     color: "#FF0000",
     gradient: "from-[#FF0000] to-[#CC0000]",
   },
   {
-    name: "GitHub",
-    displayName: "Github",
-    subText: "@EkiZR",
-    icon: Github,
-    url: "https://github.com/EkiZR",
-    color: "#ffffff",
-    gradient: "from-[#333] to-[#24292e]",
+    name: "Facebook",
+    displayName: "Facebook",
+    subText: "Shofaya Tsany",
+    icon: Facebook, // Menggunakan icon Facebook bawaan lucide-react
+    url: "https://www.facebook.com/shofayatsany",
+    color: "#1877F2", // Warna resmi Facebook
+    gradient: "from-[#1877F2] to-[#0056b3]", // Efek gradasi biru Facebook
   },
   {
     name: "TikTok",
     displayName: "Tiktok",
-    subText: "@eki_zulfar",
+    subText: "@fayyyaa",
     icon: ({ className, ...props }) => (
       <svg
         width="24px"
@@ -81,7 +80,7 @@ const socialLinks = [
               fill="#25F4EE"
             ></path>
             <path
-              d="M21.6220653,23.5764245 L21.6220653,11.392751 C23.8996163,12.9794449 26.6204327,13.7141388 29.5251673,13.7633633 L29.5251673,9.44581224 C28.0822286,9.04613878 26.7617388,8.29381224 25.6824735,7.25617959 C25.5110449,7.09724082 25.3494122,6.92826122 25.1926776,6.75438367 C24.7922694,6.4752 24.4126776,6.16736327 24.056351,5.83356735 C22.8186367,4.66026122 22.0041061,3.11030204 21.7396163,1.42540408 L17.3730857,1.42540408 L17.3730857,23.7111184 C17.3730857,27.7957714 15.1690041,29.9560163 12.4334939,29.9560163 C11.6569224,29.9538122 10.8918612,29.7681796 10.2005143,29.414302 C9.50941224,29.0601796 8.91186122,28.5476082 8.45635102,27.9182204 C7.49071837,27.3946286 6.72712653,26.5636898 6.2865551,25.5571592 C5.84573878,24.5508735 5.75341224,23.4260571 6.02377959,22.3609959 C6.29390204,21.2959347 6.91177959,20.3516082 7.77896327,19.6771592 C8.64639184,19.0027102 9.71365714,18.6365878 10.8122694,18.6365878 C11.3564327,18.6412408 11.8961878,18.7362612 12.4090041,18.9182204 L12.4090041,14.1894857 C10.304351,14.1921796 8.24647347,14.8093224 6.48786122,15.9657306 C4.72924898,17.1221388 3.3470449,18.7666286 2.51047347,20.6978939 C1.67390204,22.6291592 1.41969796,24.7627102 1.77896327,26.8362612 C2.13822857,28.9098122 3.09553469,30.8334857 4.53308571,32.3704653 C6.36271837,33.6848327 8.55945306,34.3906286 10.8122694,34.3884296 C16.7730857,34.3884296 21.6220653,30.7445878 21.6220653,23.5764245"
+              d="M21.6220653,23.5764245 L21.6220653,11.392751 C23.8996163,12.9794449 26.6204327,13.7141388 29.5251673,13.7633633 L29.5251673,9.44581224 C28.0822286,9.04613878 26.7617388,8.29381224 25.6824735,7.25617959 C25.5110449,7.09724082 25.3494122,6.92826122 25.1926776,6.75438367 C24.7922694,6.4752 24.4126776,6.16736327 24.056351,5.83356735 C22.8186367,4.66026122 22.0041061,3.11030204 21.7396163,1.42540408 L17.3730857,1.42540408 L17.3730857,23.7111184 C17.3730857,27.7957714 15.1690041,29.9560163 12.4334939,29.9560163 C11.6569224,29.9538122 10.8918612,29.7681796 10.2005143,29.414302 C9.50941224,29.0601796 8.91186122,28.5476082 8.45635102,27.9182204 C7.49071837,27.3946286 6.72712653,26.5636898 6.2865551,25.5571592 C5.84573878,24.5508735 5.75341224,23.4260571 6.02377959,22.3609959 C6.29390204,21.2959347 6.91177959,20.3516082 7.77896327,19.6771592 C8.64639184,19.0027102 9.71365714,18.6365878 10.8122694,18.6365878 C11.3564327,18.6412408 11.8961878,18.7362612 12.4090041,18.9182204 L12.4090041,14.1894857 C10.304351,14.1921796 8.24647347,14.8093224 6.48786122,15.9657306 C4.72924898,17.1221388 3.3470449,18.7666286 2.51047347,20.6978939 C1.67390204,22.6291592 1.41969796,24.7627102 1.77896327,26.8362612 C2.13822857,28.9098122 3.09553469,30.8334857 4.53308571,32.3704653 C6.36271837,33.6848327 8.55945306,34.3906286 10.8122694,34.3884296 C16.7730612,34.3884296 21.6220653,30.7445878 21.6220653,23.5764245"
               id="Fill-5"
               fill="#000000"
             ></path>
@@ -89,7 +88,7 @@ const socialLinks = [
         </g>
       </svg>
     ),
-    url: "https://tiktok.com/@eki_zulfar",
+    url: "https://www.tiktok.com/@fayyyz_",
     color: "black",
     gradient: "from-[#000000] via-[#25F4EE] to-[#FE2C55]",
   },
@@ -98,12 +97,11 @@ const socialLinks = [
 const SocialLinks = () => {
   const linkedIn = socialLinks.find((link) => link.isPrimary);
   const otherLinks = socialLinks.filter((link) => !link.isPrimary);
-  const [instagram, youtube, github, tiktok] = otherLinks;
+  const [instagram, youtube, facebook, tiktok] = otherLinks;
 
   useEffect(() => {
     AOS.init({
       offset: 10,
-     
     });
   }, []);
 
@@ -111,9 +109,9 @@ const SocialLinks = () => {
     <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl">
       <h3
         className="text-xl font-semibold text-white mb-6 flex items-center gap-2"
-        data-aos="fade-down" 
+        data-aos="fade-down"
       >
-        <span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
+        <span className="inline-block w-8 h-1 bg-teal-500 rounded-full"></span>
         Connect With Me
       </h3>
 
@@ -127,17 +125,14 @@ const SocialLinks = () => {
                      bg-white/5 border border-white/10 overflow-hidden
                      hover:border-white/20 transition-all duration-500"
           data-aos="fade-up"
-          data-aos-delay="100" 
+          data-aos-delay="100"
         >
-          {/* Hover Gradient Background */}
           <div
             className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
-                       bg-gradient-to-r ${linkedIn.gradient}`}
+                        bg-gradient-to-r ${linkedIn.gradient}`}
           />
 
-          {/* Content Container */}
           <div className="relative flex items-center gap-4">
-            {/* Icon Container */}
             <div className="relative flex items-center justify-center">
               <div
                 className="absolute inset-0 opacity-20 rounded-md transition-all duration-500
@@ -152,7 +147,6 @@ const SocialLinks = () => {
               </div>
             </div>
 
-            {/* Text Container */}
             <div className="flex flex-col">
               <span className="text-lg font-bold pt-[0.2rem] text-gray-200 tracking-tight leading-none group-hover:text-white transition-colors duration-300">
                 {linkedIn.displayName}
@@ -163,14 +157,12 @@ const SocialLinks = () => {
             </div>
           </div>
 
-          {/* External Link */}
           <ExternalLink
             className="relative w-5 h-5 text-gray-500 group-hover:text-white
                        opacity-0 group-hover:opacity-100 transition-all duration-300
                        transform group-hover:translate-x-0 -translate-x-1"
           />
 
-          {/* Shine Effect */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none overflow-hidden">
             <div
               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
@@ -190,8 +182,8 @@ const SocialLinks = () => {
               className="group relative flex items-center gap-3 p-4 rounded-xl 
                                bg-white/5 border border-white/10 overflow-hidden
                                hover:border-white/20 transition-all duration-500"
-              data-aos="fade-up" 
-              data-aos-delay={200 + index * 100} 
+              data-aos="fade-up"
+              data-aos-delay={200 + index * 100}
             >
               <div
                 className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
@@ -212,7 +204,6 @@ const SocialLinks = () => {
                 </div>
               </div>
 
-              {/* Text Container */}
               <div className="flex flex-col min-w-0">
                 <span className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
                   {link.displayName}
@@ -238,9 +229,9 @@ const SocialLinks = () => {
           ))}
         </div>
 
-        {/* Third Row - GitHub & TikTok */}
+        {/* Third Row - Facebook & TikTok */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[github, tiktok].map((link, index) => (
+          {[facebook, tiktok].map((link, index) => (
             <a
               key={link.name}
               href={link.url}
@@ -249,7 +240,7 @@ const SocialLinks = () => {
               className="group relative flex items-center gap-3 p-4 rounded-xl 
                                bg-white/5 border border-white/10 overflow-hidden
                                hover:border-white/20 transition-all duration-500"
-              data-aos="fade-up" 
+              data-aos="fade-up"
               data-aos-delay={400 + index * 100}
             >
               <div
@@ -271,7 +262,6 @@ const SocialLinks = () => {
                 </div>
               </div>
 
-              {/* Text Container */}
               <div className="flex flex-col min-w-0">
                 <span className="text-sm font-bold text-gray-200 group-hover:text-white transition-colors duration-300">
                   {link.displayName}
@@ -296,7 +286,6 @@ const SocialLinks = () => {
             </a>
           ))}
         </div>
-  
       </div>
     </div>
   );

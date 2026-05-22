@@ -1,92 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/Photo.jpg" />
-  <!-- preload Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <!-- Basic -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" href="/Meta.jpg" /> -->
 
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
+    <!-- preload Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <noscript>
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    >
-  </noscript>
-  
-  <!-- SEO Utama -->
-  <title>Eki Zulfar Rachman | Front-End Web Developer</title>
-  <meta name="description" content="Website resmi Eki Zulfar Rachman, Front-End Web Developer. Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan." />
-  <meta name="keywords" content="Eki Zulfar Rachman, Eki ZR, Front-End Web Developer, ekizr, Portofolio Eki" />
-  <meta name="author" content="Eki Zulfar Rachman" />
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
 
-  <!-- Google Search Console -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
 
+    <!-- SEO Utama -->
+    <title>
+      Shofaya Tsany Ediningtyas | Apoteker & Profesional Kefarmasian
+    </title>
+    <meta
+      name="description"
+      content="Website resmi Shofaya Tsany Ediningtyas, seorang Apoteker. Berkomitmen memberikan edukasi kesehatan, pelayanan kefarmasian terbaik, dan solusi kesehatan yang terpercaya."
+    />
+    <meta
+      name="keywords"
+      content="Shofaya Tsany Ediningtyas, Shofaya Tsany, Apoteker, Apoteker Indonesia, Portofolio Apoteker, Edukasi Obat"
+    />
+    <meta name="author" content="Shofaya Tsany Ediningtyas" />
 
-  <!-- Theme / PWA -->
-  <meta name="theme-color" content="#030014" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Google Search Console -->
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ekizr.com/" />
-  <meta property="og:title" content="Eki Zulfar Rachman | Front-End Web Developer" />
-  <meta property="og:description" content="Website resmi dan portofolio Eki Zulfar Rachman, Front-End Web Developer." />
-  <meta property="og:image" content="https://ekizr.com/Meta.png" />
+    <!-- Theme / PWA -->
+    <meta name="theme-color" content="#030014" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://ekizr.com/" />
-  <meta name="twitter:title" content="Eki Zulfar Rachman | Front-End Web Developer" />
-  <meta name="twitter:description" content="Website resmi dan portofolio Eki Zulfar Rachman." />
-  <meta name="twitter:image" content="https://ekizr.com/Meta.png" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shofayatsany.vercel.app/" />
+    <meta property="og:title" content="Shofaya Tsany Ediningtyas | Apoteker" />
+    <meta
+      property="og:description"
+      content="Website resmi dan portofolio profesional Shofaya Tsany Ediningtyas, seorang Apoteker terpercaya."
+    />
+    <!-- <meta property="og:image" content="https://shofayatsany.vercel.app/Meta.png" /> -->
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://ekizr.com/" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shofayatsany.vercel.app/" />
+    <meta name="twitter:title" content="Shofaya Tsany Ediningtyas | Apoteker" />
+    <meta
+      name="twitter:description"
+      content="Website resmi dan portofolio profesional Shofaya Tsany Ediningtyas, seorang Apoteker terpercaya."
+    />
+    <!-- <meta name="twitter:image" content="https://shofayatsany.vercel.app/Meta.png" /> -->
 
-  <!-- Structured Data: Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Eki Zulfar Rachman",
-    "url": "https://ekizr.com",
-    "image": "https://ekizr.com/Photo.jpg",
-    "jobTitle": "Front-End Web Developer",
-    "description": "Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.",
-    "sameAs": [
-      "https://www.linkedin.com/in/ekizr/",
-      "https://www.instagram.com/ekizr_/?hl=id",
-     "https://github.com/EkiZR",
-     "https://www.tiktok.com/@eki_zulfar"
-    ]
-  }
-  </script>
-</head>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://shofayatsany.vercel.app/" />
 
-<body>
-  <!-- Konten teks penting untuk SEO -->
-  <header style="display:none">
-    <h1>Eki Zulfar Rachman</h1>
-    <p>
-      Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan.
-    </p>
-  </header>
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shofaya Tsany Ediningtyas",
+        "url": "https://shofayatsany.vercel.app",
+        "image": "https://shofayatsany.vercel.app/Photo.jpg",
+        "jobTitle": "Apoteker",
+        "description": "Seorang Apoteker yang berkomitmen memberikan edukasi kesehatan, pelayanan kefarmasian terbaik, dan solusi kesehatan yang terpercaya.",
+        "sameAs": [
+          "https://www.linkedin.com/in/shofaya-tsany",
+          "https://www.instagram.com/shofayatsany"
+        ]
+      }
+    </script>
+  </head>
 
-  <!-- Root React -->
-  <div id="root"></div>
+  <body>
+    <!-- Konten teks penting untuk SEO -->
+    <header style="display: none">
+      <h1>Shofaya Tsany Ediningtyas</h1>
+      <p>
+        Website resmi Shofaya Tsany Ediningtyas, seorang Apoteker. Berkomitmen
+        memberikan edukasi kesehatan, pelayanan kefarmasian terbaik, dan solusi
+        kesehatan yang terpercaya.
+      </p>
+    </header>
 
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <!-- Root React -->
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
