@@ -273,7 +273,7 @@ const Home = () => {
                     }`}
                   >
                     <img
-                      src="Animation1.gif"
+                      src="medicine.gif"
                       alt="Pharmacist Professional Illustration"
                       className={`w-full h-full object-contain transition-all duration-500 ${
                         isHovering ? "scale-[95%] rotate-2" : "scale-[90%]"
