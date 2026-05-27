@@ -116,7 +116,6 @@ export default function Certificates() {
 
       // 3. Insert ke Table database sertifikat (Mendukung fallback 'Img' dan 'img' jika case sensitif)
       const { error: dbError } = await supabase.from("certificates").insert({
-        img: data.publicUrl,
         img: data.publicUrl, // Mengirim dua variasi sekaligus sebagai bentuk pertahanan aman dari bug penamaan kolom
       });
 

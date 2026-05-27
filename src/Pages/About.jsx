@@ -277,10 +277,9 @@ const AboutPage = () => {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center lg:justify-start">
               <a
-                href="https://drive.google.com/"
+                href="/myCV.pdf"
+                download="myCV.pdf"
                 className="w-full sm:w-auto"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <button
                   data-aos="fade-up"
